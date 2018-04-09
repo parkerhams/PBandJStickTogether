@@ -12,6 +12,12 @@ public class Jelly : MonoBehaviour {
 
 	public float health = 4f;
 
+    public Canvas results;
+
+    public Canvas pbPlayerUI;
+
+    public Canvas jellyUI;
+
 	//public static int EnemiesAlive = 0;
 
     [SerializeField]
@@ -22,8 +28,11 @@ public class Jelly : MonoBehaviour {
 
 	void Start ()
 	{
-		//EnemiesAlive++;
-	}
+        //EnemiesAlive++;
+        results.gameObject.SetActive(false);
+        pbPlayerUI.gameObject.SetActive(false);
+        jellyUI.gameObject.SetActive(false);
+    }
 
 	void OnCollisionEnter2D (Collision2D colInfo)
 	{
@@ -31,11 +40,16 @@ public class Jelly : MonoBehaviour {
 		{
 			Die();
 		}
-        if(CompareTag("PeanutButter"))
+        if(colInfo.gameObject.tag == "PeanutButter")
         {
             float dist = Vector3.Distance(peanutButterTransform.position, transform.position);
-            accuracyText.text = "Accuracy: " + dist % 100;
+            float percentage = (dist / dist) * 100;
+            results.gameObject.SetActive(true);
+            pbPlayerUI.gameObject.SetActive(true);
+            jellyUI.gameObject.SetActive(true);
+            accuracyText.text = "Delicious!\nAccuracy: " + percentage + "%";
             smoochSound.Play();
+            Time.timeScale = 0;
         }
 	}
 

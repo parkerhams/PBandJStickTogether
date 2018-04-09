@@ -19,8 +19,10 @@ public class Bread : MonoBehaviour {
 	{
 		if (isPressed)
 		{
-			Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //Mouse Input with aid from Unity API's and from Asbjorn 
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+            //this is supposed to 
 			if (Vector3.Distance(mousePos, hook.position) > maxDragDistance)
 				rb.position = hook.position + (mousePos - hook.position).normalized * maxDragDistance;
 			else
@@ -56,7 +58,6 @@ public class Bread : MonoBehaviour {
 			nextBread.SetActive(true);
 		} else
 		{
-			//Enemy.EnemiesAlive = 0;
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}
 	
