@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 6a5bb54ef6616424d8acec168a05341c
+timeCreated: 1523249902
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: PeanutButterJelly
+  fontNames:
+  - PeanutButterJelly
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
