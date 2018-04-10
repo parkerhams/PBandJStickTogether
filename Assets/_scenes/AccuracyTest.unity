@@ -941,6 +941,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 695683084}
+--- !u!82 &722043235 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82621320821144974, guid: 6ac2d23a2335bfc439e01084d5ee7194,
+    type: 2}
+  m_PrefabInternal: {fileID: 755962618}
 --- !u!1001 &755962618
 Prefab:
   m_ObjectHideFlags: 0
@@ -1005,6 +1010,16 @@ Prefab:
       propertyPath: jellyUI
       value: 
       objectReference: {fileID: 333478406}
+    - target: {fileID: 82621320821144974, guid: 6ac2d23a2335bfc439e01084d5ee7194,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82621320821144974, guid: 6ac2d23a2335bfc439e01084d5ee7194,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ac2d23a2335bfc439e01084d5ee7194, type: 2}
   m_IsPrefabParent: 0
@@ -1570,13 +1585,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sandwichEffect: {fileID: 1556191461808218, guid: a25b2bc2ec2be684e862218669fa2442,
     type: 2}
-  smoochSound: {fileID: 0}
+  smoochSound: {fileID: 722043235}
   health: 1
-  results: {fileID: 0}
-  pbPlayerUI: {fileID: 0}
-  jellyUI: {fileID: 0}
+  resultsUI: {fileID: 299995613}
+  pbPlayerUI: {fileID: 646579278}
+  jellyUI: {fileID: 333478406}
   accuracyText: {fileID: 1948039016}
-  peanutButterTransform: {fileID: 0}
+  peanutButterTransform: {fileID: 67511085}
 --- !u!1 &1336144247
 GameObject:
   m_ObjectHideFlags: 0

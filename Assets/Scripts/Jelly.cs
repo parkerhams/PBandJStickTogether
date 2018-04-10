@@ -12,7 +12,7 @@ public class Jelly : MonoBehaviour {
 
 	public float health = 4f;
 
-    public Canvas results;
+    public Canvas resultsUI;
 
     public Canvas pbPlayerUI;
 
@@ -29,7 +29,7 @@ public class Jelly : MonoBehaviour {
 	void Start ()
 	{
         //EnemiesAlive++;
-        results.gameObject.SetActive(false);
+        resultsUI.gameObject.SetActive(false);
         pbPlayerUI.gameObject.SetActive(false);
         jellyUI.gameObject.SetActive(false);
     }
@@ -44,7 +44,7 @@ public class Jelly : MonoBehaviour {
         {
             float dist = Vector3.Distance(peanutButterTransform.position, transform.position);
             float percentage = (dist / dist) * 100;
-            results.gameObject.SetActive(true);
+            resultsUI.gameObject.SetActive(true);
             pbPlayerUI.gameObject.SetActive(true);
             jellyUI.gameObject.SetActive(true);
             accuracyText.text = "Delicious!\nAccuracy: " + percentage + "%";
