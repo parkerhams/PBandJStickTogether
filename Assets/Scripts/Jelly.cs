@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Jelly : MonoBehaviour {
 
@@ -12,7 +13,8 @@ public class Jelly : MonoBehaviour {
 
 	public float health = 4f;
 
-    public Canvas resultsUI;
+    [SerializeField]
+    GameObject resultsUI;
 
     public Canvas pbPlayerUI;
 
@@ -29,12 +31,12 @@ public class Jelly : MonoBehaviour {
 	void Start ()
 	{
         //EnemiesAlive++;
-        resultsUI.gameObject.SetActive(false);
+        resultsUI.SetActive(false);
         pbPlayerUI.gameObject.SetActive(false);
         jellyUI.gameObject.SetActive(false);
     }
 
-	void OnCollisionEnter2D (Collision2D colInfo)
+    void OnCollisionEnter2D (Collision2D colInfo)
 	{
 		if (colInfo.relativeVelocity.magnitude > health)
 		{
@@ -44,7 +46,7 @@ public class Jelly : MonoBehaviour {
         {
             float dist = Vector3.Distance(peanutButterTransform.position, transform.position);
             float percentage = (dist / dist) * 100;
-            resultsUI.gameObject.SetActive(true);
+            resultsUI.SetActive(true);
             pbPlayerUI.gameObject.SetActive(true);
             jellyUI.gameObject.SetActive(true);
             accuracyText.text = "Delicious!\nAccuracy: " + percentage + "%";
