@@ -24,15 +24,15 @@ public class TitleNavigation : MonoBehaviour
 
     private void Start()
     {
-        toasterText.enabled = true;
-        titleText.enabled = false;
-        startButton.enabled = false;
-        quitButton.enabled = false;
-        heartJelly.enabled = false;
-        heartPB.enabled = false;
+        toasterText.enabled = false;
+        //titleText.enabled = false;
+        //startButton.enabled = false;
+        //quitButton.enabled = false;
+        //heartJelly.enabled = false;
+        //heartPB.enabled = false;
     }
 
-    void OnMouseUp()
+    void OnMouseDown()
     {
         toasterText.enabled = false;
         titleText.enabled = true;
