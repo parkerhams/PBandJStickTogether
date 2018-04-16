@@ -15,6 +15,9 @@ public class Jelly : MonoBehaviour
 	public float health = 4f;
 
     [SerializeField]
+    public float endPauseTime = 4f;
+
+    [SerializeField]
     GameObject resultsUI;
 
     public Canvas pbPlayerUI;
@@ -37,24 +40,37 @@ public class Jelly : MonoBehaviour
         jellyUI.gameObject.SetActive(false);
     }
 
-    void OnCollisionEnter2D (Collision2D colInfo)
-	{
-		if (colInfo.relativeVelocity.magnitude > health)
-		{
-			Die();
-		}
-        if(colInfo.gameObject.tag == "PeanutButter")
+    void OnCollisionEnter2D(Collision2D colInfo)
+    {
+        //if (colInfo.relativeVelocity.magnitude > health)
+        //{
+        //    Die();
+        //}
+        if (colInfo.gameObject.tag == "PeanutButter")
         {
             float dist = Vector3.Distance(peanutButterTransform.position, transform.position);
+
+            Instantiate(sandwichEffect, transform.position, Quaternion.identity);
             float percentage = (dist / dist) * 100;
             resultsUI.SetActive(true);
             pbPlayerUI.gameObject.SetActive(true);
             jellyUI.gameObject.SetActive(true);
             accuracyText.text = "Delicious!\nAccuracy: " + percentage + "%";
             smoochSound.Play();
+            //StartCoroutine(WaitForTimeToPause());
+
             Time.timeScale = 0;
         }
-	}
+    }
+	
+
+    IEnumerator WaitForTimeToPause()
+    {
+        Debug.Log("This CoRoutine is waiting two seconds to pause");
+        yield return new WaitForSeconds(endPauseTime);
+        Time.timeScale = 0;
+        
+    }
 
 	void Die ()
 	{

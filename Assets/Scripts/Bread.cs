@@ -68,7 +68,7 @@ public class Bread : MonoBehaviour
 		GetComponent<SpringJoint2D>().enabled = false;
 		this.enabled = false;
 
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(3f);
 
 		if (nextBread != null)
 		{
