@@ -49,7 +49,6 @@ public class Jelly : MonoBehaviour
         if (colInfo.gameObject.tag == "PeanutButter")
         {
             float dist = Vector3.Distance(peanutButterTransform.position, transform.position);
-
             Instantiate(sandwichEffect, transform.position, Quaternion.identity);
             float percentage = (dist / dist) * 100;
             resultsUI.SetActive(true);
