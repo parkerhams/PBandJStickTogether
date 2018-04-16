@@ -19,6 +19,9 @@ public class Bread : MonoBehaviour
     [SerializeField]
     AudioSource toasterUp;
 
+    //[SerializeField]
+    //public float upwardVelocity = new Vector2(1f, 5f);
+
 	private bool isPressed = false;
 
 	void Update ()
@@ -77,5 +80,13 @@ public class Bread : MonoBehaviour
 		}
 	
 	}
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.tag == "JumpPad")
+    //    {
+    //        this.rb.AddForce(upwardVelocity);
+    //    }
+    //}
 
 }
