@@ -13,6 +13,11 @@ public class Bread : MonoBehaviour {
 
 	public GameObject nextBread;
 
+    [SerializeField]
+    AudioSource toasterDown;
+    [SerializeField]
+    AudioSource toasterUp;
+
 	private bool isPressed = false;
 
 	void Update ()
@@ -33,13 +38,21 @@ public class Bread : MonoBehaviour {
 	void OnMouseDown ()
 	{
 		isPressed = true;
-		rb.isKinematic = true;
+        if (isPressed)
+        {
+            toasterDown.Play();
+            rb.isKinematic = true;
+        }
 	}
 
 	void OnMouseUp ()
 	{
 		isPressed = false;
-		rb.isKinematic = false;
+        if (isPressed == false)
+        {
+            toasterUp.Play();
+            rb.isKinematic = false;
+        }
 
 		StartCoroutine(Release());
 	}
@@ -56,6 +69,7 @@ public class Bread : MonoBehaviour {
 		if (nextBread != null)
 		{
 			nextBread.SetActive(true);
+            //Destroy(this.gameObject);
 		} else
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
