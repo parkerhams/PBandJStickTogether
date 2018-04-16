@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Bread : MonoBehaviour {
+public class Bread : MonoBehaviour
+{
 
 	public Rigidbody2D rb;
 	public Rigidbody2D hook;

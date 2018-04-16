@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioKeepPlaying : MonoBehaviour {
+public class AudioKeepPlaying : MonoBehaviour
+{
 
     private static AudioKeepPlaying instance = null;
     public static AudioKeepPlaying InstanceOfAudio

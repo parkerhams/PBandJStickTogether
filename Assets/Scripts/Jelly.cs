@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Jelly : MonoBehaviour {
+public class Jelly : MonoBehaviour
+{
 
 	public GameObject sandwichEffect;
 
