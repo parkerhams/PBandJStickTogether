@@ -5,20 +5,38 @@ using UnityEngine.UI;
 
 public class Pickups : MonoBehaviour 
 {
-    [SerializeField]
-    GameObject pickupText;
+    static int bananaCount = 0;
+
+    private Text bananaCountText;
+
+    private AudioSource audioSource;
+
+    private SpriteRenderer spriteRenderer;
+    private BoxCollider2D boxCollider2D;
 
     private void Start()
     {
-        pickupText.SetActive(false);
+        bananaCountText = GameObject.Find("PickupText").GetComponent<Text>();
+        bananaCountText.text = "PB and Banana Sandwiches made: " + bananaCount;
+        audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
-    public void OnCollisionEnter2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collider.CompareTag("PeanutButter"))
+        if (collision.gameObject.tag == "PeanutButter")
         {
-            Destroy(this.gameObject);
-            pickupText.SetActive(true);
+            audioSource.Play();
+            //increments that banana count
+            bananaCount++;
+            bananaCountText.text = "PB and Banana Sandwiches made: " + bananaCount;
+            spriteRenderer.enabled = false;
+            boxCollider2D.enabled = false;
+
+            //Destroy(gameObject);
         }
+
+
     }
 }
