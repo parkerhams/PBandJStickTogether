@@ -3117,12 +3117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: AccuracyTest
-  titleText: {fileID: 1998045977}
-  toasterText: {fileID: 524343121}
   startButton: {fileID: 1504240181}
-  quitButton: {fileID: 430815845}
-  heartPB: {fileID: 1570056762}
-  heartJelly: {fileID: 1587372327}
 --- !u!4 &1826266123
 Transform:
   m_ObjectHideFlags: 0
@@ -3147,7 +3142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6205dad17de35604f94ac9448d4700c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: LevelSelect
+  levelToLoad: Comic
   sceneFader: {fileID: 2022474920}
 --- !u!1 &1853446694
 GameObject:

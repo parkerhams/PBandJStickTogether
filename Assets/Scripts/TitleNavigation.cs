@@ -9,22 +9,22 @@ public class TitleNavigation : MonoBehaviour
     // Name of next scene
     [SerializeField]
     string nextScene;
-    [SerializeField]
-    Text titleText;
-    [SerializeField]
-    Text toasterText;
+    //[SerializeField]
+    //Text titleText;
+    //[SerializeField]
+    //Text toasterText;
     [SerializeField]
     Button startButton;
-    [SerializeField]
-    Button quitButton;
-    [SerializeField]
-    Image heartPB;
-    [SerializeField]
-    Image heartJelly;
+    //[SerializeField]
+    //Button quitButton;
+    //[SerializeField]
+    //Image heartPB;
+    //[SerializeField]
+    //Image heartJelly;
 
     private void Start()
     {
-        toasterText.enabled = false;
+        //toasterText.enabled = false;
         //titleText.enabled = false;
         //startButton.enabled = false;
         //quitButton.enabled = false;
@@ -34,12 +34,12 @@ public class TitleNavigation : MonoBehaviour
 
     void OnMouseDown()
     {
-        toasterText.enabled = false;
-        titleText.enabled = true;
-        startButton.enabled = true;
-        quitButton.enabled = true;
-        heartJelly.enabled = true;
-        heartPB.enabled = true;
+        //toasterText.enabled = false;
+        //titleText.enabled = true;
+        //startButton.enabled = true;
+        //quitButton.enabled = true;
+        //heartJelly.enabled = true;
+        //heartPB.enabled = true;
 
     }
 

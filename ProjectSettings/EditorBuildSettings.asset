@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_scenes/Title.unity
     guid: f5ceb88616dd5ca478250efed97b7021
   - enabled: 1
+    path: Assets/_scenes/Comic.unity
+    guid: 12c9388fb554aff4eb0188d855b4941d
+  - enabled: 1
     path: Assets/_scenes/LevelSelect.unity
     guid: 77111e2e9d81fa44d8ad833ad7520e73
   - enabled: 1
