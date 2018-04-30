@@ -68,25 +68,41 @@ public class Bread : MonoBehaviour
 		GetComponent<SpringJoint2D>().enabled = false;
 		this.enabled = false;
 
-		yield return new WaitForSeconds(3f);
+		//yield return new WaitForSeconds(3f);
 
-		if (nextBread != null)
-		{
-			nextBread.SetActive(true);
-            //Destroy(this.gameObject);
-		} else
-		{
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-		}
+		//if (nextBread != null)
+		//{
+		//	nextBread.SetActive(true);
+  //          //Destroy(this.gameObject);
+		//} else
+		//{
+		//	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		//}
 	
 	}
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if(collision.gameObject.tag == "JumpPad")
-    //    {
-    //        this.rb.AddForce(upwardVelocity);
-    //    }
-    //}
+    IEnumerator HitGroundLevelReload()
+    {
+        yield return new WaitForSeconds(3f);
+
+        if (nextBread != null)
+        {
+            nextBread.SetActive(true);
+            //Destroy(this.gameObject);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Jelly")
+        {
+            this.rb.velocity = Vector3.zero;
+            //this.rb.angularVelocity = Vector3.zero;
+        }
+    }
 
 }

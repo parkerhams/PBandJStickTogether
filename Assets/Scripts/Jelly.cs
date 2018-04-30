@@ -58,7 +58,7 @@ public class Jelly : MonoBehaviour
             smoochSound.Play();
             //StartCoroutine(WaitForTimeToPause());
 
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
     }
 	

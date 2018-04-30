@@ -17,7 +17,7 @@ public class Pickups : MonoBehaviour
     private void Start()
     {
         bananaCountText = GameObject.Find("PickupText").GetComponent<Text>();
-        bananaCountText.text = "PB and Banana Sandwiches made: " + bananaCount;
+        bananaCountText.text = "Bananas: " + bananaCount;
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
