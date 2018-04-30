@@ -6460,11 +6460,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1588875812}
   m_Mesh: {fileID: 4300060, guid: bc43aad90ddb7be4f8c47c6c3288de00, type: 3}
---- !u!1 &1621084900 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1612223512796240, guid: eda1cfdf3b6374042b608bd84998ba7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1814828633}
 --- !u!1 &1685449882
 GameObject:
   m_ObjectHideFlags: 0
@@ -6855,6 +6850,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 223241606493342380, guid: eda1cfdf3b6374042b608bd84998ba7f,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2099720916}
     - target: {fileID: 114794211777077220, guid: eda1cfdf3b6374042b608bd84998ba7f,
         type: 2}
       propertyPath: toasterDown
@@ -6865,11 +6865,6 @@ Prefab:
       propertyPath: toasterUp
       value: 
       objectReference: {fileID: 1241391780}
-    - target: {fileID: 223241606493342380, guid: eda1cfdf3b6374042b608bd84998ba7f,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2099720916}
     - target: {fileID: 114708787257551696, guid: eda1cfdf3b6374042b608bd84998ba7f,
         type: 2}
       propertyPath: toasterDown
@@ -6885,27 +6880,6 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2099720916}
-    - target: {fileID: 114810928879585250, guid: eda1cfdf3b6374042b608bd84998ba7f,
-        type: 2}
-      propertyPath: dashParticles
-      value: 
-      objectReference: {fileID: 1556191461808218, guid: a25b2bc2ec2be684e862218669fa2442,
-        type: 2}
-    - target: {fileID: 114810928879585250, guid: eda1cfdf3b6374042b608bd84998ba7f,
-        type: 2}
-      propertyPath: dashTimer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114794211777077220, guid: eda1cfdf3b6374042b608bd84998ba7f,
-        type: 2}
-      propertyPath: maxDragDistance
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114794211777077220, guid: eda1cfdf3b6374042b608bd84998ba7f,
-        type: 2}
-      propertyPath: nextBread
-      value: 
-      objectReference: {fileID: 1621084900}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eda1cfdf3b6374042b608bd84998ba7f, type: 2}
   m_IsPrefabParent: 0

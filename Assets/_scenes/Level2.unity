@@ -471,9 +471,29 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114794211777077220, guid: eda1cfdf3b6374042b608bd84998ba7f,
+        type: 2}
+      propertyPath: toasterUp
+      value: 
+      objectReference: {fileID: 92273964}
+    - target: {fileID: 114794211777077220, guid: eda1cfdf3b6374042b608bd84998ba7f,
+        type: 2}
+      propertyPath: toasterDown
+      value: 
+      objectReference: {fileID: 92273963}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eda1cfdf3b6374042b608bd84998ba7f, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &92273963 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82732025982997884, guid: eda1cfdf3b6374042b608bd84998ba7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 92273962}
+--- !u!82 &92273964 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82917835096388534, guid: eda1cfdf3b6374042b608bd84998ba7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 92273962}
 --- !u!1 &104109628
 GameObject:
   m_ObjectHideFlags: 0
@@ -7876,6 +7896,11 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
         type: 2}
