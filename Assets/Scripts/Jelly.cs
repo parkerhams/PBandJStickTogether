@@ -32,6 +32,9 @@ public class Jelly : MonoBehaviour
     [SerializeField]
     Transform peanutButterTransform;
 
+    [SerializeField]
+    string nextScene;
+
 	void Start ()
 	{
         //EnemiesAlive++;
@@ -58,8 +61,14 @@ public class Jelly : MonoBehaviour
             smoochSound.Play();
             //StartCoroutine(WaitForTimeToPause());
 
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
         }
+    }
+
+    public void OnStartButtonClicked()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(nextScene);
     }
 	
 
