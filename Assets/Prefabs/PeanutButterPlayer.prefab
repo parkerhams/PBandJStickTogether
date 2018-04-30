@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114920017162181206}
   - component: {fileID: 82743167209468882}
   - component: {fileID: 82117182570567782}
+  - component: {fileID: 252569297235150232}
   m_Layer: 8
   m_Name: PeanutButterPlayer
   m_TagString: PeanutButter
@@ -74,9 +75,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1775593339577042}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.18, y: -0.61, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.332, y: 0.345, z: 0}
+  m_LocalScale: {x: 0.759466, y: 0.76944524, z: 1}
   m_Children:
   - {fileID: 224594950645549722}
   m_Father: {fileID: 0}
@@ -118,7 +119,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 9}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 8, y: 9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -403,7 +404,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 944a6059017a81f4a88792862f49e7b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5df708968bb09cd4b9a3a6d416b5e616, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -455,7 +456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.37, y: 3.195}
+  m_AnchoredPosition: {x: 0.4, y: 2.36}
   m_SizeDelta: {x: 3.75, y: 1.845}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224835808266472242
@@ -492,6 +493,23 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.036055528
+  m_Distance: 0.47236472
   m_DampingRatio: 0
   m_Frequency: 1.5
+--- !u!252 &252569297235150232
+SurfaceEffector2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775593339577042}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 1
+  m_SpeedVariation: 0
+  m_ForceScale: 0.001
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 1
