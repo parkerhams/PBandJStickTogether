@@ -11,6 +11,10 @@ public class DashAbility : MonoBehaviour {
 
     [SerializeField]
     private Rigidbody2D rigidbody;
+    [SerializeField]
+    private AudioSource dashSound;
+    [SerializeField]
+    private GameObject dashParticles;
 
     void Update()
     {
@@ -22,9 +26,13 @@ public class DashAbility : MonoBehaviour {
                 {
                     savedVelocity = rigidbody.velocity;
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x * 3f, rigidbody.velocity.y);
+                    dashSound.Play();
+                    Instantiate(dashParticles, transform.position, Quaternion.identity);
                     dashState = DashState.Dashing;
                 }
                 break;
+                //This case ,ayout is courtesy of user Alanissac on Unity3D forums --- 
+                //these next two cases WERE NOT MINE, and I based the previous code form on this forum.
             case DashState.Dashing:
                 dashTimer += Time.deltaTime * 3;
                 if (dashTimer >= maxDash)
