@@ -1302,8 +1302,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1763253897}
   cameraFollowSpeed: 5
-  xOffset: 6.66
-  yOffset: 0.77
+  xOffset: 0
+  yOffset: -1
 --- !u!1 &870017825
 GameObject:
   m_ObjectHideFlags: 0
