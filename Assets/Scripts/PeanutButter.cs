@@ -13,6 +13,7 @@ public class PeanutButter: MonoBehaviour
 	public float maxDragDistance = 2f;
 
 	public GameObject nextBread;
+    public Canvas pbPlayerUI;
 
     [SerializeField]
     AudioSource toasterDown;
@@ -24,7 +25,12 @@ public class PeanutButter: MonoBehaviour
 
 	private bool isPressed = false;
 
-	void Update ()
+    private void Start()
+    {
+        pbPlayerUI.gameObject.SetActive(false);
+    }
+
+    void Update ()
 	{
 		if (isPressed)
 		{
@@ -102,6 +108,7 @@ public class PeanutButter: MonoBehaviour
         if (collision.gameObject.tag == "Jelly")
         {
             this.rb.velocity = Vector3.zero;
+            pbPlayerUI.gameObject.SetActive(true);
             //this.rb.angularVelocity = Vector3.zero;
         }
     }

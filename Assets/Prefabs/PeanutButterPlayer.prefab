@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 82743167209468882}
   - component: {fileID: 82117182570567782}
   - component: {fileID: 252569297235150232}
+  - component: {fileID: 114813579721050254}
+  - component: {fileID: 82452744249820056}
   m_Layer: 8
   m_Name: PeanutButterPlayer
   m_TagString: PeanutButter
@@ -76,7 +78,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1775593339577042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.332, y: 0.345, z: 0}
+  m_LocalPosition: {x: -0.13, y: -0.19, z: 0}
   m_LocalScale: {x: 0.759466, y: 0.76944524, z: 1}
   m_Children:
   - {fileID: 224594950645549722}
@@ -141,6 +143,86 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82452744249820056
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775593339577042}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 088c664fb67488649970b0fd37fa491e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.669
+  m_Pitch: 2.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -325,6 +407,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114813579721050254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775593339577042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1c022912b1a254ea9b0ca445c1c65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashState: 0
+  dashTimer: 5
+  maxDash: 20
+  savedVelocity: {x: 5, y: 5}
+  rigidbody: {fileID: 50524485311054228}
+  dashSound: {fileID: 82452744249820056}
+  dashParticles: {fileID: 1556191461808218, guid: a25b2bc2ec2be684e862218669fa2442,
+    type: 2}
 --- !u!114 &114920017162181206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,8 +442,9 @@ MonoBehaviour:
   releaseTime: 0.15
   maxDragDistance: 2
   nextBread: {fileID: 0}
-  toasterDown: {fileID: 0}
-  toasterUp: {fileID: 0}
+  pbPlayerUI: {fileID: 223282489486612288}
+  toasterDown: {fileID: 82117182570567782}
+  toasterUp: {fileID: 82743167209468882}
 --- !u!114 &114924297604785226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -493,7 +595,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.47236472
+  m_Distance: 0.245968
   m_DampingRatio: 0
   m_Frequency: 1.5
 --- !u!252 &252569297235150232
@@ -502,7 +604,7 @@ SurfaceEffector2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1775593339577042}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2

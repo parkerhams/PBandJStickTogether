@@ -12,15 +12,11 @@ public class Jelly : MonoBehaviour
     [SerializeField]
     AudioSource smoochSound;
 
-	public float health = 4f;
-
     [SerializeField]
     public float endPauseTime = 4f;
 
     [SerializeField]
     GameObject resultsUI;
-
-    public Canvas pbPlayerUI;
 
     public Canvas jellyUI;
 
@@ -39,7 +35,6 @@ public class Jelly : MonoBehaviour
 	{
         //EnemiesAlive++;
         resultsUI.SetActive(false);
-        pbPlayerUI.gameObject.SetActive(false);
         jellyUI.gameObject.SetActive(false);
     }
 
@@ -55,7 +50,6 @@ public class Jelly : MonoBehaviour
             Instantiate(sandwichEffect, transform.position, Quaternion.identity);
             float percentage = (dist / dist) * 100;
             resultsUI.SetActive(true);
-            pbPlayerUI.gameObject.SetActive(true);
             jellyUI.gameObject.SetActive(true);
             accuracyText.text = "Delicious!\nAccuracy: " + percentage + "%";
             smoochSound.Play();
