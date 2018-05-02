@@ -481,6 +481,21 @@ Prefab:
       propertyPath: toasterDown
       value: 
       objectReference: {fileID: 92273963}
+    - target: {fileID: 114816008773740762, guid: eda1cfdf3b6374042b608bd84998ba7f,
+        type: 2}
+      propertyPath: toasterUp
+      value: 
+      objectReference: {fileID: 92273966}
+    - target: {fileID: 114816008773740762, guid: eda1cfdf3b6374042b608bd84998ba7f,
+        type: 2}
+      propertyPath: toasterDown
+      value: 
+      objectReference: {fileID: 92273965}
+    - target: {fileID: 114816008773740762, guid: eda1cfdf3b6374042b608bd84998ba7f,
+        type: 2}
+      propertyPath: nextBread
+      value: 
+      objectReference: {fileID: 92273967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eda1cfdf3b6374042b608bd84998ba7f, type: 2}
   m_IsPrefabParent: 0
@@ -492,6 +507,26 @@ AudioSource:
 --- !u!82 &92273964 stripped
 AudioSource:
   m_PrefabParentObject: {fileID: 82917835096388534, guid: eda1cfdf3b6374042b608bd84998ba7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 92273962}
+--- !u!82 &92273965 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82691403888529868, guid: eda1cfdf3b6374042b608bd84998ba7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 92273962}
+--- !u!82 &92273966 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82953619982481532, guid: eda1cfdf3b6374042b608bd84998ba7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 92273962}
+--- !u!1 &92273967 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1631694528651526, guid: eda1cfdf3b6374042b608bd84998ba7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 92273962}
+--- !u!4 &92273968 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4302804033341338, guid: eda1cfdf3b6374042b608bd84998ba7f,
     type: 2}
   m_PrefabInternal: {fileID: 92273962}
 --- !u!1 &104109628
@@ -2082,7 +2117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e17088a0680cbb479ea26d18d3248bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToFollow: {fileID: 182276610}
+  objectToFollow: {fileID: 92273968}
+  nextObject: {fileID: 182276610}
   cameraFollowSpeed: 5
   xOffset: 6.55
   yOffset: 0.77
@@ -7896,6 +7932,16 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
         type: 2}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Bread : MonoBehaviour
+public class PeanutButter: MonoBehaviour
 {
 
 	public Rigidbody2D rb;

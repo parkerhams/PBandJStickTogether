@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-
     [SerializeField]
     Transform objectToFollow;
+
+    [SerializeField]
+    Transform nextObject;
 
     [SerializeField]
     float cameraFollowSpeed = 5;
@@ -17,18 +19,18 @@ public class CameraController : MonoBehaviour
     float yOffset;
 
     float zOffset = -10;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        Vector3 newPosition = new Vector3(objectToFollow.position.x + xOffset, objectToFollow.position.y + yOffset, zOffset);
-        transform.position = Vector3.Lerp(transform.position, newPosition, cameraFollowSpeed * Time.deltaTime);
-
+        if (objectToFollow != null)
+        {
+            Vector3 newPosition = new Vector3(objectToFollow.position.x + xOffset, objectToFollow.position.y + yOffset, zOffset);
+            transform.position = Vector3.Lerp(transform.position, newPosition, cameraFollowSpeed * Time.deltaTime);
+        }
+        else if (objectToFollow == null)
+        {
+            objectToFollow = nextObject;
+        }
 
     }
 }
