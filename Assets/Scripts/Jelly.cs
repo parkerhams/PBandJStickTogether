@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Jelly : MonoBehaviour
 {
+    public Canvas jellyUI;
+    public GameObject sandwichEffect;
 
-	public GameObject sandwichEffect;
+    public Canvas pbPlayerUI;
 
     [SerializeField]
     AudioSource smoochSound;
@@ -18,36 +20,43 @@ public class Jelly : MonoBehaviour
     [SerializeField]
     GameObject resultsUI;
 
-    public Canvas jellyUI;
-
-	//public static int EnemiesAlive = 0;
+    [SerializeField]
+    Sprite kissSprite;
+    [SerializeField]
+    Sprite defaultSprite;
+    [SerializeField]
+    Sprite pbKissSprite;
 
     [SerializeField]
     Text accuracyText;
 
     [SerializeField]
     Transform peanutButterTransform;
+    [SerializeField]
+    SpriteRenderer pbSpriteRenderer;
 
     [SerializeField]
     string nextScene;
 
-	void Start ()
+    private SpriteRenderer jellyspriteRenderer;
+
+    void Start ()
 	{
-        //EnemiesAlive++;
         resultsUI.SetActive(false);
         jellyUI.gameObject.SetActive(false);
+        jellyspriteRenderer = GetComponent<SpriteRenderer>();
+        jellyspriteRenderer.sprite = defaultSprite;
     }
 
     void OnCollisionEnter2D(Collision2D colInfo)
     {
-        //if (colInfo.relativeVelocity.magnitude > health)
-        //{
-        //    Die();
-        //}
         if (colInfo.gameObject.tag == "PeanutButter")
         {
             float dist = Vector3.Distance(peanutButterTransform.position, transform.position);
             Instantiate(sandwichEffect, transform.position, Quaternion.identity);
+            jellyspriteRenderer.sprite = kissSprite;
+            pbPlayerUI.gameObject.SetActive(true);
+            pbSpriteRenderer.sprite = pbKissSprite;
             float percentage = (dist / dist) * 100;
             resultsUI.SetActive(true);
             jellyUI.gameObject.SetActive(true);

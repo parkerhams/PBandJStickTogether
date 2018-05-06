@@ -20,15 +20,22 @@ public class PeanutButter: MonoBehaviour
     [SerializeField]
     AudioSource toasterUp;
 
+    [SerializeField]
+    Sprite defaultSprite;
+
     //[SerializeField]
     //public float upwardVelocity = new Vector2(1f, 5f);
 
-	private bool isPressed = false;
+    private bool isPressed = false;
+
+    private SpriteRenderer pbSpriteRenderer;
 
     private void Start()
     {
         pbPlayerUI.gameObject.SetActive(false);
-    }
+        pbSpriteRenderer = GetComponent<SpriteRenderer>();
+        pbSpriteRenderer.sprite = defaultSprite;
+}
 
     void Update ()
 	{
@@ -108,7 +115,6 @@ public class PeanutButter: MonoBehaviour
         if (collision.gameObject.tag == "Jelly")
         {
             this.rb.velocity = Vector3.zero;
-            pbPlayerUI.gameObject.SetActive(true);
             //this.rb.angularVelocity = Vector3.zero;
         }
     }
