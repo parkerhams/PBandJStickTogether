@@ -1249,7 +1249,7 @@ Prefab:
         type: 2}
       propertyPath: pbPlayer
       value: 
-      objectReference: {fileID: 92273963}
+      objectReference: {fileID: 0}
     - target: {fileID: 20572308295775510, guid: 84d6de8780d540c4aa8b0db653244438,
         type: 2}
       propertyPath: orthographic size
@@ -8825,6 +8825,21 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a25b2bc2ec2be684e862218669fa2442, type: 2}
   m_IsPrefabParent: 0
@@ -12068,11 +12083,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4095858277124802, guid: 6ac2d23a2335bfc439e01084d5ee7194, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.72
+      value: 13.69
       objectReference: {fileID: 0}
     - target: {fileID: 4095858277124802, guid: 6ac2d23a2335bfc439e01084d5ee7194, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.31
+      value: -3.36
       objectReference: {fileID: 0}
     - target: {fileID: 4095858277124802, guid: 6ac2d23a2335bfc439e01084d5ee7194, type: 2}
       propertyPath: m_LocalPosition.z

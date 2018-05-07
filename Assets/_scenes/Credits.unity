@@ -172,7 +172,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: e0106bbf0e3aaad449f4246337072b77, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278650707
+    rgba: 4278190091
 --- !u!23 &8574226
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2066,6 +2066,8 @@ MonoBehaviour:
   levelToLoad: Comic
   creditsLevel: Credits
   titleLevel: Title
+  finalComicScene: FinalComic
+  tutorialLevel: TutorialScene
   sceneFader: {fileID: 1688700391}
 --- !u!114 &824568572
 MonoBehaviour:
@@ -2825,7 +2827,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: e0106bbf0e3aaad449f4246337072b77, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278650707
+    rgba: 4278321690
 --- !u!23 &1195085538
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -156,6 +156,8 @@ MonoBehaviour:
   levelToLoad: Level2
   creditsLevel: Credits
   titleLevel: Title
+  finalComicScene: FinalComic
+  tutorialLevel: TutorialScene
   sceneFader: {fileID: 463649362}
 --- !u!4 &262279702 stripped
 Transform:

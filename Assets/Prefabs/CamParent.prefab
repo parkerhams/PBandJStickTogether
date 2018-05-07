@@ -161,7 +161,7 @@ MonoBehaviour:
   objectToFollow: {fileID: 0}
   nextObject: {fileID: 0}
   cameraFollowSpeed: 5
-  xOffset: 6.55
+  xOffset: 4.1
   yOffset: 0.77
 --- !u!114 &114612654137412358
 MonoBehaviour:
