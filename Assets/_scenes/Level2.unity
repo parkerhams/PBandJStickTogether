@@ -1844,7 +1844,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.665994
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5402,6 +5402,7 @@ MonoBehaviour:
   levelToLoad: Level3
   creditsLevel: Credits
   titleLevel: Title
+  finalComicScene: FinalComic
   tutorialLevel: TutorialScene
   sceneFader: {fileID: 887861718}
 --- !u!4 &1183859081
@@ -6811,6 +6812,11 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198466443995514920, guid: a25b2bc2ec2be684e862218669fa2442,
         type: 2}

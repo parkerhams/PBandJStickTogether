@@ -143,6 +143,7 @@ MonoBehaviour:
   levelToLoad: Level1
   creditsLevel: Credits
   titleLevel: Title
+  finalComicScene: FinalComic
   tutorialLevel: TutorialScene
   sceneFader: {fileID: 227039163}
 --- !u!4 &35851003
@@ -1684,7 +1685,12 @@ Prefab:
     - target: {fileID: 114413217445868198, guid: 33291e00488ef45499f7e43490701c20,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20857648332134682, guid: 33291e00488ef45499f7e43490701c20,
+        type: 2}
+      propertyPath: orthographic size
+      value: 6.0120025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33291e00488ef45499f7e43490701c20, type: 2}
