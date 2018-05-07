@@ -328,6 +328,57 @@ MonoBehaviour:
   cameraFollowSpeed: 5
   xOffset: 1.39
   yOffset: 0.59
+--- !u!114 &458515627 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114994188964751594, guid: f7eee546c8400e8419322f4f28e5e0a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 856382254}
+  m_Script: {fileID: 11500000, guid: 1a722db3f06d7a54e8da3aaf1a9e7136, type: 3}
+--- !u!1 &496720667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 496720669}
+  - component: {fileID: 496720668}
+  m_Layer: 0
+  m_Name: SceneMover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &496720668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 496720667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6205dad17de35604f94ac9448d4700c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Title
+  creditsLevel: Credits
+  titleLevel: Title
+  tutorialLevel: TutorialScene
+  sceneFader: {fileID: 458515627}
+--- !u!4 &496720669
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 496720667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 412.93692, y: 239.22989, z: -2.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &713801093
 GameObject:
   m_ObjectHideFlags: 0
