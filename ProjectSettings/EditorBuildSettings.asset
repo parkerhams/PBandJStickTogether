@@ -15,8 +15,14 @@ EditorBuildSettings:
     path: Assets/_scenes/Comic.unity
     guid: 12c9388fb554aff4eb0188d855b4941d
   - enabled: 1
+    path: Assets/_scenes/Credits.unity
+    guid: e965a9e8b84e19b409f3d4788908875c
+  - enabled: 1
     path: Assets/_scenes/LevelSelect.unity
     guid: 77111e2e9d81fa44d8ad833ad7520e73
+  - enabled: 1
+    path: Assets/_scenes/TutortialScene.unity
+    guid: 2eb8bb8264c5428479214eac8ed18ee4
   - enabled: 1
     path: Assets/_scenes/Level1.unity
     guid: 31b26c087ffa06a4b925aac0656160ce
@@ -26,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_scenes/Level3.unity
     guid: 7161be9beb8267b4b89b9fc5ba6692ed
+  - enabled: 1
+    path: Assets/_scenes/FinalComic.unity
+    guid: 28472bc0072863b47bb61e9774dab376

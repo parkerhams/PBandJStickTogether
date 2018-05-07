@@ -24,6 +24,7 @@ public class DashAbility : MonoBehaviour {
                 var isDashKeyDown = Input.GetKeyDown(KeyCode.LeftShift);
                 if (isDashKeyDown)
                 {
+                    //rigidbody.velocity = Vector3.zero;
                     savedVelocity = rigidbody.velocity;
                     rigidbody.velocity = new Vector2(rigidbody.velocity.x * 3f, rigidbody.velocity.y);
                     dashSound.Play();

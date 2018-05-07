@@ -893,7 +893,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608979922217574}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 01470345a197dfa4594f445e8fd38d05, type: 3}
@@ -973,7 +973,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608979922217574}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 292042372248de84f936d818b73cdcd4, type: 3}
@@ -1146,6 +1146,7 @@ MonoBehaviour:
   pbPlayerUI: {fileID: 223510498000544542}
   toasterDown: {fileID: 82197385476835762}
   toasterUp: {fileID: 82011191355646852}
+  defaultSprite: {fileID: 0}
 --- !u!114 &114264889836583986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1331,6 +1332,7 @@ MonoBehaviour:
   pbPlayerUI: {fileID: 223107962636233910}
   toasterDown: {fileID: 82381840907612384}
   toasterUp: {fileID: 82425340434084602}
+  defaultSprite: {fileID: 21300000, guid: 5df708968bb09cd4b9a3a6d416b5e616, type: 3}
 --- !u!212 &212538543189341642
 SpriteRenderer:
   m_ObjectHideFlags: 1

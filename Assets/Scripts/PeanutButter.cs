@@ -50,6 +50,11 @@ public class PeanutButter: MonoBehaviour
 			else
 				rb.position = mousePos;
 		}
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 	}
 
 	void OnMouseDown ()
@@ -74,6 +79,11 @@ public class PeanutButter: MonoBehaviour
 		StartCoroutine(Release());
 	}
 
+    IEnumerator DisplayInstructionsToRestartText()
+    {
+        yield return new WaitForSeconds(5f);
+    }
+
 	IEnumerator Release ()
 	{
 		yield return new WaitForSeconds(releaseTime);
@@ -87,11 +97,11 @@ public class PeanutButter: MonoBehaviour
         {
             nextBread.SetActive(true);
             //Destroy(this.gameObject);
-        }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        }        //else
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //}
+
 
     }
 
@@ -104,18 +114,22 @@ public class PeanutButter: MonoBehaviour
             nextBread.SetActive(true);
             //Destroy(this.gameObject);
         }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        //else
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Jelly")
         {
-            this.rb.velocity = Vector3.zero;
+            rb.angularDrag = 0;
             //this.rb.angularVelocity = Vector3.zero;
+        }
+        if(collision.gameObject.tag == "Banana")
+        {
+            collision.gameObject.SetActive(false);
         }
     }
 

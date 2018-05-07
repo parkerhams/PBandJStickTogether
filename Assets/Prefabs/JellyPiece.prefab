@@ -232,16 +232,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3da75fc4e6543148bf02eaef1111c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jellyUI: {fileID: 223521032859777526}
   sandwichEffect: {fileID: 1556191461808218, guid: a25b2bc2ec2be684e862218669fa2442,
     type: 2}
+  pbPlayerUI: {fileID: 223282489486612288, guid: 986a0699ddbc4714b965b1d6b6b111e9,
+    type: 2}
   smoochSound: {fileID: 82621320821144974}
-  health: 1
   endPauseTime: 4
-  resultsUI: {fileID: 0}
-  pbPlayerUI: {fileID: 0}
-  jellyUI: {fileID: 223521032859777526}
-  accuracyText: {fileID: 0}
-  peanutButterTransform: {fileID: 0}
+  resultsUI: {fileID: 1813114339793874, guid: 5f97c628e5de09042867a4278c5c6fba, type: 2}
+  resultsPanelAnim: {fileID: 95570461365914946, guid: 5f97c628e5de09042867a4278c5c6fba,
+    type: 2}
+  kissSprite: {fileID: 21300000, guid: 1f4e75d8afe9fdb4c85340b0391d70a1, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 166ed81e8fd7bd2409658e2ee04de36c, type: 3}
+  pbKissSprite: {fileID: 21300000, guid: c9915bd8efd6e4449bb72cb111af60b1, type: 3}
+  accuracyText: {fileID: 114839839571699724, guid: 5c5c07486c028b64face871da6e82ea2,
+    type: 2}
+  peanutButterTransform: {fileID: 4165379958007032, guid: 986a0699ddbc4714b965b1d6b6b111e9,
+    type: 2}
+  pbSpriteRenderer: {fileID: 212625369513702080, guid: 986a0699ddbc4714b965b1d6b6b111e9,
+    type: 2}
+  nextScene: 
 --- !u!114 &114674702555360032
 MonoBehaviour:
   m_ObjectHideFlags: 1

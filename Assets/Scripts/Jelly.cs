@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using EZCameraShake;
 
 public class Jelly : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Jelly : MonoBehaviour
 
     [SerializeField]
     GameObject resultsUI;
+    [SerializeField]
+    Animator resultsPanelAnim;
 
     [SerializeField]
     Sprite kissSprite;
@@ -36,36 +39,62 @@ public class Jelly : MonoBehaviour
     SpriteRenderer pbSpriteRenderer;
 
     [SerializeField]
+    private Rigidbody2D jellyRB;
+
+    [SerializeField]
     string nextScene;
 
     private SpriteRenderer jellyspriteRenderer;
 
     void Start ()
 	{
-        resultsUI.SetActive(false);
+        //resultsUI.SetActive(false);
+        resultsPanelAnim.SetBool("resultsAreActive", false);
         jellyUI.gameObject.SetActive(false);
         jellyspriteRenderer = GetComponent<SpriteRenderer>();
         jellyspriteRenderer.sprite = defaultSprite;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D colInfo)
     {
         if (colInfo.gameObject.tag == "PeanutButter")
         {
-            float dist = Vector3.Distance(peanutButterTransform.position, transform.position);
-            Instantiate(sandwichEffect, transform.position, Quaternion.identity);
-            jellyspriteRenderer.sprite = kissSprite;
-            pbPlayerUI.gameObject.SetActive(true);
-            pbSpriteRenderer.sprite = pbKissSprite;
-            float percentage = (dist / dist) * 100;
-            resultsUI.SetActive(true);
-            jellyUI.gameObject.SetActive(true);
-            accuracyText.text = "Delicious!\nAccuracy: " + percentage + "%";
-            smoochSound.Play();
-            //StartCoroutine(WaitForTimeToPause());
-
-            Time.timeScale = 0;
+            HitPBLevelOver();
         }
+    }
+
+    void HitPBLevelOver()
+    {
+        float dist = Vector3.Distance(peanutButterTransform.position, transform.position);
+        Instantiate(sandwichEffect, transform.position, Quaternion.identity);
+
+        jellyspriteRenderer.sprite = kissSprite;
+        pbPlayerUI.gameObject.SetActive(true);
+        pbSpriteRenderer.sprite = pbKissSprite;
+
+        CameraShaker.Instance.ShakeOnce(4f, 3f, .1f, 1.5f);
+
+        jellyRB.angularDrag = 0;
+
+        float percentage = (dist / dist) * 100;
+        resultsUI.SetActive(true);
+        jellyUI.gameObject.SetActive(true);
+
+        resultsPanelAnim.SetBool("resultsAreActive", true);
+        accuracyText.text = "Delicious!\nAccuracy: " + percentage + "%";
+
+        smoochSound.Play();
+        //StartCoroutine(WaitForTimeToPause());
+
+        //Time.timeScale = 0;
     }
 
     public void OnStartButtonClicked()
@@ -83,15 +112,9 @@ public class Jelly : MonoBehaviour
         
     }
 
-	void Die ()
+	void End()
 	{
 		Instantiate(sandwichEffect, transform.position, Quaternion.identity);
-
-		//EnemiesAlive--;
-		//if (EnemiesAlive <= 0)
-		//	Debug.Log("LEVEL WON!");
-
-		//Destroy(gameObject);
 	}
 
 }

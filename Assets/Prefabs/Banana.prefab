@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4974408013334146}
   - component: {fileID: 212613178530687542}
-  - component: {fileID: 114480432665244276}
+  - component: {fileID: 114877504326746918}
   - component: {fileID: 61333471202431530}
   m_Layer: 0
   m_Name: Banana
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 13.32}
   m_EdgeRadius: 0
---- !u!114 &114480432665244276
+--- !u!114 &114877504326746918
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,10 +75,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330337149020204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c2f10176c8a0342a974089fc1f2af7, type: 3}
+  m_Script: {fileID: 11500000, guid: ab8a5ec5442b57946af5d828b3eccddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupText: {fileID: 0}
+  bananaCountText: {fileID: 0}
 --- !u!212 &212613178530687542
 SpriteRenderer:
   m_ObjectHideFlags: 1
