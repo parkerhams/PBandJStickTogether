@@ -82,7 +82,7 @@ public class Jelly : MonoBehaviour
 
         CameraShaker.Instance.ShakeOnce(4f, 3f, .1f, 1.5f);
 
-        jellyRB.angularDrag = 0;
+        //jellyRB.angularDrag = 0;
 
         float percentage = (dist / dist) * 100;
         resultsUI.SetActive(true);

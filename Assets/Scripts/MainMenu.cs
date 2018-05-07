@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour {
 
     public string titleLevel = "Title";
 
+    public string finalComicScene = "FinalComic";
+
     public string tutorialLevel = "TutorialScene";
 
 	public SceneFader sceneFader;
@@ -25,6 +27,11 @@ public class MainMenu : MonoBehaviour {
 	{
 		sceneFader.FadeTo(levelToLoad);
 	}
+
+    public void LoadFinalComic()
+    {
+        sceneFader.FadeTo(finalComicScene);
+    }
 
     public void Tutorial()
     {
